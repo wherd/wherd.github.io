@@ -1,0 +1,117 @@
+/* Defaults */
+html {
+    font-size: 18px;
+    font-feature-settings: normal;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+body {
+    max-width: 30em;
+    margin: 0 auto;
+    padding: 2em;
+    line-height: 1.6;
+    counter-reset: steps;
+    background-color: #0f0f0f;
+    color: #f0f0f0
+}
+
+h1, h2, h3 {
+    margin-top: 2em;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    color: #f0f0f0;
+}
+
+a[target="_blank"]:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 2px;
+    background: url(/images/external-link.svg) no-repeat center;
+    background-size: 100%;
+}
+
+.sr-only {
+    clip: rect(0, 0, 0, 0);
+    border-width: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    padding: .5em 0;
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+/* Text styles */
+.text-lead {
+    font-size: 1.2em;
+}
+
+.text-small {
+    font-size: 0.75em;
+    color: #666
+}
+
+.text-xsmall {
+    font-size: 0.65em;
+    color: #666
+}
+
+.text-inline {
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    vertical-align: top;
+}
+
+.text-mono {
+    font-family: Monaco, Consolas, monospace;
+}
+
+.text-bold {
+    font-weight: 800;
+}
+
+.emoji {
+    color: transparent;  
+    text-shadow: 0 0 0 #f0f0f0;
+}
+
+.counter--steps::before {
+    counter-increment: steps;
+    content: counter(steps) "º Passo: ";
+}

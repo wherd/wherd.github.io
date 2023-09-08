@@ -1,0 +1,16 @@
+title = "Wherd"
+baseURL = "https://www.wherd.dev/"
+languageCode = "en-US"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+enableRobotsTXT = true
+enableGitInfo=true
+
+footnoteReturnLinkContents = "↩"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[permalinks]
+  wrtitting = "/:filename/"
