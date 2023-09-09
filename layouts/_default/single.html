@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+<header class="header">
+    <nav class="text-small">
+        <a href="{{ .Site.BaseURL }}" title="Return to home page">
+            <span class="sr-only">Navigate to home page</span>
+            <span class="text-bold" aria-hidden="true" rel="presentation">wherd</span>
+        </a>
+        / <a href="/writing">Writing</a>
+        / {{ .Title }}
+    </nav>
+</header>
+<main id="main">
+    <article class="single">
+        <header class="single-header">
+            <h1>{{ .Title }}</h1>
+            <p>
+                <time pubdate>{{ .Date | time.Format ":date_long" }}</time>
+                ~{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
+            </p>
+        </header>
+        <section class="single-content">
+            {{ .Content }}
+        </section>
+        <footer class="single-pagination">
+            {{ with .PrevInSection }}<a class="single__pagination__previous" href="{{.Permalink}}"> {{.Title}}</a>{{ end }}
+            {{ with .NextInSection }}<a class="single__pagination__next" href="{{.Permalink}}"> {{.Title}}</a>{{ end }}
+        </footer>
+    </article>
+</main>
+{{ partial "footer.html" . }}

@@ -7,10 +7,14 @@ enableGitInfo=true
 
 footnoteReturnLinkContents = "↩"
 
-[sitemap]
-  changefreq = "monthly"
-  filename = "sitemap.xml"
-  priority = 0.5
+[markup]
+[markup.goldmark]
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
 
-[permalinks]
-  wrtitting = "/:filename/"
+
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5

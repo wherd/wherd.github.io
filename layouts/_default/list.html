@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+<header class="header">
+    <nav class="text-small">
+        <a href="{{ .Site.BaseURL }}" title="Return to home page">
+            <span class="sr-only">Navigate to home page</span>
+            <span class="text-bold" aria-hidden="true" rel="presentation">wherd</span>
+        </a>
+        /
+        Writing
+    </nav>
+</header>
+
+<main id="main">
+    <h1 class="sr-only">Writing</h1>
+    {{ range .Data.Pages.GroupByDate "2006" }}
+    <section class="archive">
+        <h2 class="text-inline">{{ .Key }}</h2>
+        {{ range .Pages.GroupByDate "January" }}
+        <div class="text-inline">
+            <h3 class="text-inline">{{ .Key }}</h3>
+            <ul class="text-inline">
+                {{ range .Pages }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+    </section>
+    {{ end }}
+</main>
+{{ partial "footer.html" . }}

@@ -1,9 +1,9 @@
 {{ partial "header.html" . }}
 <header class="header">
-    <nav>
+    <nav class="text-small">
         <a href="{{ .Site.BaseURL }}" title="Return to home page">
             <span class="sr-only">Navigate to home page</span>
-            <span class="text-bold" aria-hidden="true" rel="presentation">( ︶︿︶)</span>
+            <span class="text-bold" aria-hidden="true" rel="presentation">wherd</span>
         </a>
     </nav>
 </header>
@@ -16,7 +16,12 @@
         Whether you're a fellow coder, a binge-watcher, a music enthusiast, or just someone looking for a bit of creative inspiration,
         I'm stoked to have you along for the ride. Let's dive into this awesome journey together!</p>
     <nav>
-        <a title="See a list of all published articles" href="{{ .Site.BaseURL }}writing/">{ Writing }</a>
+        <ul>
+            <li><a title="See a list of all published articles" href="{{ .Site.BaseURL }}writing/">{ Writing }</a></li>
+            <li><a target="_blank" title="View my open source projects" href="https://github.com/wherd">{ Coding }</a></li>
+            <li><a target="_blank" title="Please consider supporting me" href="https://ko-fi.com/wherd">{ Buy me a coffee }</a></li>
+
+        </ul>
     </nav>
 </main>
 {{ partial "footer.html" . }}

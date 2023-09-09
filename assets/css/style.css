@@ -6,12 +6,12 @@ html {
 }
 
 body {
-    max-width: 30em;
+    max-width: 40em;
     margin: 0 auto;
     padding: 2em;
     line-height: 1.6;
     counter-reset: steps;
-    background-color: #0f0f0f;
+    background-color: #1f1f20;
     color: #f0f0f0
 }
 
@@ -42,14 +42,47 @@ a {
     color: #f0f0f0;
 }
 
-a[target="_blank"]:after {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-left: 2px;
-    background: url(/images/external-link.svg) no-repeat center;
-    background-size: 100%;
+blockquote {
+    margin-left: 0;
+    padding-left: 1em;
+    border-left: 5px solid #333;
+    font-style: italic;
+    color: #999;
+}
+
+figure {
+    margin: 1em 0;
+}
+
+figcaption {
+    font-size: 0.7em;
+    color: #999;
+}
+
+figcaption:before {
+    content: "- ";
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+pre, code {
+    font-family: Monaco, Consolas, monospace;
+}
+
+pre {
+    overflow: hidden;
+    color: #999;
+}
+
+pre:hover {
+    overflow: visible;
+}
+
+code {
+    font-size: 0.8em;
 }
 
 .sr-only {
@@ -68,8 +101,9 @@ a[target="_blank"]:after {
     position: sticky;
     top: 0;
     padding: .5em 0;
-    background-color: #0f0f0f;
-    color: #f0f0f0;
+    font-style: italic;
+    background-color: #1f1f20;
+    color: #f0f0f0
 }
 
 .header a {
@@ -83,12 +117,10 @@ a[target="_blank"]:after {
 
 .text-small {
     font-size: 0.75em;
-    color: #666
 }
 
 .text-xsmall {
     font-size: 0.65em;
-    color: #666
 }
 
 .text-inline {
@@ -96,6 +128,11 @@ a[target="_blank"]:after {
     margin-right: 1em;
     margin-bottom: 1em;
     vertical-align: top;
+}
+
+h2.text-inline, h3.text-inline {
+    margin-top: 0;
+    line-height: 1.1;
 }
 
 .text-mono {
@@ -111,7 +148,58 @@ a[target="_blank"]:after {
     text-shadow: 0 0 0 #f0f0f0;
 }
 
-.counter--steps::before {
-    counter-increment: steps;
-    content: counter(steps) "º Passo: ";
+/* archive */
+.archive {
+    margin-top: 4em;
+}
+
+/* Single article */
+.single-header h1 {
+    margin-bottom: 0;
+}
+
+.single-header p {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.single-content ul {
+    list-style: disc;
+    margin-left: 1em;
+}
+
+.single-pagination {
+    display: flex;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.single-pagination a {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    border: 4px solid #000;
+    padding: 0.5em 1.2em;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+}
+
+.single-pagination a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.single-pagination__previous::after {
+    content: "\00AB";
+    position: absolute;
+    left: 0.5em;
+}
+
+.single-pagination__next::after {
+    content: "\00BB";
+    position: absolute;
+    right: 0.5em;
 }
