@@ -1,7 +1,9 @@
 title = "Wherd"
 baseURL = "https://www.wherd.dev/"
-languageCode = "en-US"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+languageCode = "pt-PT"
+defaultContentLanguage = "pt"
+defaultContentLang = "pt"
+disableKinds = ["taxonomy"]
 enableRobotsTXT = true
 enableGitInfo=true
 
@@ -12,7 +14,6 @@ footnoteReturnLinkContents = "↩"
 [markup.goldmark.parser]
 [markup.goldmark.parser.attribute]
 block = true
-
 
 [sitemap]
 changefreq = "weekly"

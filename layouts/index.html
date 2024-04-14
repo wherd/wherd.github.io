@@ -1,27 +1,26 @@
 {{ partial "header.html" . }}
 <header class="header">
     <nav class="text-small">
-        <a href="{{ .Site.BaseURL }}" title="Return to home page">
-            <span class="sr-only">Navigate to home page</span>
-            <span class="text-bold" aria-hidden="true" rel="presentation">wherd</span>
+        <a href="{{ .Site.BaseURL }}" title="Voltar à página inicial">
+            <span class="sr-only">Voltar à página inicial</span>
+            <span class="text-bold" aria-hidden="true" rel="presentation">( ︶︿︶)</span>
         </a>
     </nav>
 </header>
 
 <main id="main">
-    <h1><span class="emoji">👋</span> Hello!</h1>
-    <p class="text-lead">I'm Wherd, a full-stack developer who's all about turning ideas into reality with lines of code.
-        Beyond coding, I'm a big fan of TV shows that keep me glued to the screen and music that sets the mood for my creative sessions.
-        But what really gets my geek on is game development - I'm all about crafting interactive experiences that are seriously fun.
-        Whether you're a fellow coder, a binge-watcher, a music enthusiast, or someone looking for creative inspiration, I'm stoked to have you along for the ride.
-        Let's dive into this extraordinary journey together!</p>
+    <h1><span class="emoji">👋</span> Olá!</h1>
+    <p class="text-lead">
+        Sou Wherd, um programador full-stack que adora transformar ideias em realidade por meio de linhas de código.
+        Além da programação, sou um grande fã de séries televisivas que me mantêm colado ao ecrã e de música que define o ambiente para as minhas sessões criativas.
+        Estou entusiasmado por te ter ao meu lado nesta jornada extraordinária!</p>
     <nav>
-        <ul>
-            <li><a title="See a list of all published articles" href="https://ko-fi.com/wherd">{ Writing }</a></li>
-            <li><a target="_blank" title="View my open source projects" href="https://github.com/wherd">{ Coding }</a></li>
-            <li><a target="_blank" title="Please consider supporting me" href="https://ko-fi.com/wherd">{ Buy me a coffee }</a></li>
-
-        </ul>
+        <a title="Vê uma lista de todos os artigos publicados" href="{{ .Site.BaseURL }}/writing/">{ Artigos }</a>,
+        <a title="Explora os livros que estou a ler" href="{{ .Site.BaseURL }}/reading/">{ Leitura }</a>,
+        <a target="_blank" title="Navega pelos meus projetos de código aberto" href="https://github.com/wherd">{ Programação }</a>
+        <div class="pt-4">
+            <a target="_blank" title="Ofereces-me um café?" href="https://ko-fi.com/wherd">{ Ofereces-me um café? }</a>
+        </div>
     </nav>
 </main>
 {{ partial "footer.html" . }}

@@ -6,21 +6,12 @@
             <span class="sr-only">Voltar à página inicial</span>
             <span class="text-bold" aria-hidden="true" rel="presentation">( ︶︿︶)</span>
         </a>
-        / Artigos
+        / {{ .Title }}
     </nav>
 </header>
 
 <main id="main">
-    <h1 class="sr-only">Artigos</h1>
-    {{ range .Data.Pages.GroupByDate "2006" }}
-    <section class="archive">
-        <h2 class="text-inline">{{ .Key }}</h2>
-        <ul class="text-inline">
-            {{ range .Pages }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
-    </section>
-    {{ end }}
+    <h1 class="sr-only">{{ .Params.subtitle }}</h1>
+    {{ .Content }}
 </main>
 {{ partial "footer.html" . }}
