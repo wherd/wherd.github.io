@@ -11,8 +11,8 @@ body {
     padding: 2em;
     line-height: 1.6;
     counter-reset: steps;
-    background-color: #1f1f20;
-    color: #f0f0f0
+    background-color: #f0f0f0;
+    color: #1f1f20
 }
 
 h1,
@@ -46,15 +46,26 @@ li {
 }
 
 a {
+    color: #1f1f20;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+a[target="_blank"]::before {
+    content: "↩ ";
+}
+
+a:hover {
     color: #f0f0f0;
+    background-color: #1f1f20;
+    text-decoration: none;
 }
 
 blockquote {
     margin-left: 0;
     padding-left: 1em;
-    border-left: 5px solid #333;
+    border-left: 5px solid #aaa;
     font-style: italic;
-    color: #999;
+    color: #333;
 }
 
 figure {
@@ -63,7 +74,7 @@ figure {
 
 figcaption {
     font-size: 0.7em;
-    color: #999;
+    color: #333;
 }
 
 figcaption:before {
@@ -78,15 +89,21 @@ img {
 pre,
 code {
     font-family: Monaco, Consolas, monospace;
+    font-size: 0.85em;
 }
 
 pre {
+    color: #555;
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 1rem solid #e0e0e0;
+    background-color: #f0f0f0;
+    max-height: 80vh;
     overflow: hidden;
-    color: #999;
 }
 
 pre:hover {
-    overflow: visible;
+    overflow: scroll;
 }
 
 code {
@@ -110,8 +127,8 @@ code {
     top: 0;
     padding: .5em 0;
     font-style: italic;
-    background-color: #1f1f20;
-    color: #f0f0f0
+    background-color: #f0f0f0;
+    color: #1f1f20;
 }
 
 .header a {
@@ -122,7 +139,6 @@ code {
 .inline-block {
     display: inline-block;
 }
-
 
 .text-lead {
     font-size: 1.2em;
@@ -179,7 +195,7 @@ h3.text-inline {
 
 .emoji {
     color: transparent;
-    text-shadow: 0 0 0 #f0f0f0;
+    text-shadow: 0 0 0 #1f1f20;
 }
 
 /* archive */
@@ -193,7 +209,7 @@ h3.text-inline {
 }
 
 .single-header p {
-    color: #999;
+    color: #333;
     font-size: 0.8em;
 }
 
@@ -213,17 +229,17 @@ h3.text-inline {
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    border: 4px solid #000;
+    border: 4px solid #f0f0f0;
     padding: 0.5em 1.2em;
     font-size: 1.2em;
     text-decoration: none;
-    color: #fff;
-    background-color: #000;
+    color: #1f1f20;
+    background-color: #f0f0f0;
 }
 
 .single-pagination a:hover {
-    color: #000;
-    background-color: #fff;
+    color: #f0f0f0;
+    background-color: #1f1f20;
 }
 
 .single-pagination__previous::after {

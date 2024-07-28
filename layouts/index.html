@@ -1,26 +1,31 @@
 {{ partial "header.html" . }}
 <header class="header">
     <nav class="text-small">
-        <a href="{{ .Site.BaseURL }}" title="Voltar à página inicial">
-            <span class="sr-only">Voltar à página inicial</span>
+        <a href="{{ .Site.BaseURL }}" title="Wherd">
+            <span class="sr-only">Wherd</span>
             <span class="text-bold" aria-hidden="true" rel="presentation">( ︶︿︶)</span>
         </a>
     </nav>
 </header>
 
 <main id="main">
-    <h1><span class="emoji">👋</span> Olá!</h1>
+    <h1><span class="emoji">👋</span> Hi there!</h1>
     <p class="text-lead">
-        Sou Wherd, um programador full-stack que adora transformar ideias em realidade por meio de linhas de código.
-        Além da programação, sou um grande fã de séries televisivas que me mantêm colado ao ecrã e de música que define o ambiente para as minhas sessões criativas.
-        Estou entusiasmado por te ter ao meu lado nesta jornada extraordinária!</p>
-    <nav>
-        <a title="Vê uma lista de todos os artigos publicados" href="{{ .Site.BaseURL }}artigos/">{ Artigos }</a>,
-        <a title="Explora os livros que estou a ler" href="{{ .Site.BaseURL }}leitura/">{ Leitura }</a>,
-        <a target="_blank" title="Navega pelos meus projetos de código aberto" href="https://github.com/wherd">{ Programação }</a>
-        <div class="pt-4">
-            <a target="_blank" title="Ofereces-me um café?" href="https://ko-fi.com/wherd">{ Ofereces-me um café? }</a>
-        </div>
-    </nav>
+        As a full-stack developer, I'm deeply passionate about the transformative power of code.
+        I thrive on the challenge of turning ideas into reality,
+        leveraging both front-end and back-end technologies to create user-friendly applications that truly make a difference.
+        This passion for programming fuels my continuous learning and growth,
+        as I eagerly tackle new challenges with each project.
+    </p>
+    <p>
+        Outside of coding, I'm a dedicated father who loves spending quality time with my family.
+        I'm also a big fan of TV series that keep me glued to the screen and music that sets the perfect mood for my creative sessions.
+        I'm genuinely excited about the possibility of having you as a part of this extraordinary journey!
+    </p>
+
+    <h2>Build Your Own X</h2>
+    <ul>
+        <li><a href="https://github.com/wherd/chip-8">Chip-8 Emulator</a></li>
+    </ul>
 </main>
 {{ partial "footer.html" . }}

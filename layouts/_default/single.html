@@ -1,11 +1,10 @@
 {{ partial "header.html" . }}
 <header class="header">
     <nav class="text-small">
-        <a href="{{ .Site.BaseURL }}" title="Voltar à página inicial">
-            <span class="sr-only">Voltar à página inicial</span>
+        <a href="{{ .Site.BaseURL }}" title="Wherd">
+            <span class="sr-only">Wherd</span>
             <span class="text-bold" aria-hidden="true" rel="presentation">( ︶︿︶)</span>
         </a>
-        / <a href="/artigos">Artigos</a>
         / {{ .Title }}
     </nav>
 </header>
@@ -15,7 +14,7 @@
             <h1>{{ .Title }}</h1>
             <p>
                 <time pubdate>{{ .Date | time.Format ":date_long" }}</time>
-                / leitura de ~{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minuto{{ else }}{{ .ReadingTime }} minutos{{ end }}
+                / ~{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute{{ else }}{{ .ReadingTime }} minutes{{ end }} reading time
             </p>
         </header>
         <section class="single-content">

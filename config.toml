@@ -1,8 +1,8 @@
 title = "Wherd"
 baseURL = "https://www.wherd.dev/"
-languageCode = "pt-PT"
-defaultContentLanguage = "pt"
-defaultContentLang = "pt"
+languageCode = "en-US"
+defaultContentLanguage = "nen"
+defaultContentLang = "en"
 disableKinds = ["taxonomy"]
 enableRobotsTXT = true
 enableGitInfo=true
