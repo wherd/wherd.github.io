@@ -47,11 +47,13 @@ li {
 
 a {
     color: #1f1f20;
+    fill: #1f1f20;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 a:hover {
     color: #f0f0f0;
+    fill: #f0f0f0;
     background-color: #1f1f20;
     text-decoration: none;
 }
@@ -258,4 +260,3 @@ h3.text-inline {
     width: auto;
     height: 1rem;
 }
-
