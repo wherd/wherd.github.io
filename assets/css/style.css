@@ -50,10 +50,6 @@ a {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-a[target="_blank"]::before {
-    content: "↩ ";
-}
-
 a:hover {
     color: #f0f0f0;
     background-color: #1f1f20;
@@ -263,6 +259,3 @@ h3.text-inline {
     height: 1rem;
 }
 
-.icon--white {
-    fill: #f0f0f0;
-}
