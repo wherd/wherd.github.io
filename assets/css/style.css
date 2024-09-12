@@ -193,6 +193,10 @@ h3.text-inline {
     padding-top: 1em;
 }
 
+.mr-2 {
+    margin-right: 0.5em;
+}
+
 .emoji {
     color: transparent;
     text-shadow: 0 0 0 #1f1f20;
@@ -252,4 +256,13 @@ h3.text-inline {
     content: "\00BB";
     position: absolute;
     right: 0.5em;
+}
+
+.icon {
+    width: auto;
+    height: 1rem;
+}
+
+.icon--white {
+    fill: #f0f0f0;
 }
