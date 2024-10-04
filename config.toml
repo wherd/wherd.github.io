@@ -1,7 +1,7 @@
 title = "Wherd"
 baseURL = "https://www.wherd.dev/"
 languageCode = "en-US"
-defaultContentLanguage = "nen"
+defaultContentLanguage = "en"
 defaultContentLang = "en"
 disableKinds = ["taxonomy"]
 enableRobotsTXT = true
